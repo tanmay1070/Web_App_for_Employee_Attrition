@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Employee Attrition</title>
+<link rel="stylesheet" href="{{url_for('static', filename='stylesheet.css')}}">
+</head>
+<body>
+<div class='image'>
+<img src="{{url_for('static', filename='a.jpg')}}">
+</div>
+<h1>Employee Attrition</h1><br>
+<form method="get", action="{{url_for('predict')}}">>
+	
+	<label for="age">Age</label>
+	<input type="text" id="age" name="age"><br><br>
+	<label for="time">Time_of_service</label>
+	<input type="text" id="time" name="time"><br><br>
+	<label for="prom">Time_since_promotion</label>
+	<input type="text" id="prom" name="prom"><br><br>
+	<label for="rate">Growth_rate</label>
+	<input type="text" id="rate" name="rate"><br><br>
+	<label for="pay">Pay_Scale</label>
+	<input type="text" id="pay" name="pay"><br><br>
+	<label for="var6">VAR6</label>
+	<input type="text" id="var6" name="var6"><br><br>
+	<label for="var7">VAR7</label>
+	<input type="text" id="var7" name="var7"><br><br>
+	<button type="submit"> Predict </button>
+</form>
+<br><br>
+<div class='answer'>
+<h2>Attrition Rate:{{answer}}</h2>
+</div>
+</body>
+</html>
+
